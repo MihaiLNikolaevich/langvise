@@ -1,0 +1,146 @@
+$li__margin-top-bot: 20px;
+
+.contact-us {
+  &.wrap {
+    padding-bottom: 50px;
+  }
+
+  .title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .des {
+    font-size: 16px;
+    color: #6E7377;
+  }
+
+  .contact {
+    margin-bottom: 50px;
+
+    strong {
+      font-weight: bold;
+      color: #0057FF;
+    }
+  }
+
+  p.tt {
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+
+  a,
+  ul p:not(.tt) {
+    font-size: 18px;
+  }
+
+  ul {
+    margin: #{14 - $li__margin-top-bot } 0 #{-$li__margin-top-bot};
+  }
+
+  li {
+    margin: $li__margin-top-bot 0;
+  }
+
+  .btn {
+    margin: 30px auto 0;
+  }
+}
+
+.questions {
+
+  &.wrap{
+    padding-bottom: 0;
+  }
+  .des {
+    font-size: 16px;
+    color: #979797;
+  }
+
+  .name {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 16px;
+  }
+
+  .gall {
+    display: grid;
+    grid-gap: 30px;
+  }
+
+  .gall_it_list {
+    margin: 19-5+px 0 -5px;
+
+  }
+
+  .gall_it_it {
+    margin: 5px 0;
+  }
+
+  a {
+    font-size: 16px;
+    line-height: 180%;
+    color: #000000;
+
+    svg {
+      margin-right: 10px;
+    }
+  }
+
+  @at-root {
+    .sl-maps {
+      position: relative;
+      left: -15px;
+      width: calc(100% + 30px);
+      margin-top: 50px;
+      font-size: 16px;
+
+      header {
+        margin-bottom: 20px;
+      }
+
+      hr {
+        background: #EAEAEA;
+        border-radius: 2px;
+        border: none;
+        height: 1px;
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+      }
+    }
+
+    .sl-maps_it {
+      padding: 20px 20px 24px;
+
+      &.active {
+        background: #0057FF;
+        color: #ffffff;
+
+        .des {
+          color: #ffffff;
+        }
+
+        a {
+          color: #ffffff;
+        }
+      }
+
+      a {
+        font-weight: bold;
+      }
+    }
+
+    #map {
+      position: relative;
+      left: -15px;
+      width: calc(100% + 30px);
+      height: 70vh;
+      max-height: 500px;
+      .gmnoprint{
+        display: none;
+      }
+    }
+  }
+}

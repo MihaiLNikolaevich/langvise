@@ -1,0 +1,30 @@
+$bg: #0057FF;
+$color: #fff;
+.advantage {
+  background: $bg;
+  color: $color;
+  &.wrap{
+    padding-top: 48px;
+    padding-bottom: 37px;
+  }
+  .cn{
+    display: grid;
+    grid-gap: 46px;
+  }
+  header{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  strong{
+    margin: 0 0 0 19px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  p{
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}

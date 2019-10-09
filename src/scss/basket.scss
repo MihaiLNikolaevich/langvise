@@ -1,0 +1,122 @@
+.basket{
+  h2.title{
+    font-size: 24px;
+  }
+
+  .gall{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 40px;
+  }
+
+  .gall_prod{
+    display: flex;
+  }
+
+  .cn-img{
+    width: 86px;
+    height: 126px;
+    flex-shrink: 0;
+    margin-right: 15px;
+  }
+  .prod_info{
+    .title{
+      font-weight: bold;
+    }
+    .price{
+      font-weight: bold;
+      font-size: 24px;
+      color: #0057FF;
+    }
+  }
+
+  .cn_count{
+    display: flex;
+    align-items: center;
+    margin: 15px 0 17px;
+    .btn-tr{
+      font-weight: bold;
+      font-size: 24px;
+    }
+    .btn-minus{
+      color: #6E7377;
+    }
+    .btn-plus{
+      color: #0057FF;
+    }
+  }
+  .total_price{
+    margin-top: 40px;
+    padding: 45px 20px 20px;
+    text-align: center;
+    border: 1px solid #0057FF;
+    border-radius: 10px;
+
+    span:not(.price){
+      display: none;
+    }
+    .price{
+      font-weight: bold;
+      font-size: 24px;
+      color: #0057FF;
+    }
+  }
+  @at-root {
+    input.prod_count{
+      width: 30px;
+      height: 34px;
+      margin: 0 5px;
+      border: 1px solid #C4C4C4;
+      border-radius: 2px;
+      padding: 0;
+      text-align: center;
+    }
+
+    .payment{
+      .btn-tr{
+        display: block;
+        margin-top: 10px;
+        padding: 5px 0;
+        font-size: 16px;
+        color: #0057FF;
+      }
+    }
+    .recipient{
+      margin: 50px 0;
+    }
+    .delivery{
+      margin: 50px 0;
+    }
+  }
+
+
+
+  .cn_submit{
+    margin-top: 50px;
+    padding: 30px 40px 40px 20px;
+    border: 1px solid #0057FF;
+    border-radius: 10px;
+    .des{
+      margin-top: 28px;
+    }
+  }
+  td{
+    min-width: 122-35px;
+    padding-bottom: 7px;
+  }
+  .sum-price{
+
+    td{
+      padding: 27-7+px 0 7px;
+    }
+    strong{
+      font-size: 18px;
+      font-weight: bold;
+      color: #0057FF;
+    }
+  }
+
+  .btn{
+    margin: 30px auto 0;
+  }
+}

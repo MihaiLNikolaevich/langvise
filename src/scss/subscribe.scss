@@ -1,0 +1,16 @@
+$bg: #0057FF;
+.subscribe{
+  background: $bg;
+  color: #ffffff;
+
+  &.wrap{
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .btn{
+    width: 100%;
+    max-width: 340px;
+    background: #000000;
+  }
+}

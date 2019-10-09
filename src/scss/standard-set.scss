@@ -1,0 +1,14 @@
+$bg: #000018;
+$list-it__margin-top-bot: 30px;
+
+.standard-set{
+  color: #ffffff;
+  background-color: $bg;
+  .list {
+    margin: #{$list-it__margin-top-bot} 0 0 0;
+  }
+
+  .list_it {
+    margin: $list-it__margin-top-bot 0;
+  }
+}

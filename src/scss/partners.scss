@@ -1,0 +1,24 @@
+$bg: #FAFAFA;
+$color: #000;
+
+.partners {
+  text-align: center;
+  background: $bg;
+
+  &.wrap {
+    padding: 30px 29px 39px;
+  }
+
+  .gall {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-gap: 20px 35px;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .gall_it {
+    max-height: 45px;
+    height: 100%;
+  }
+}

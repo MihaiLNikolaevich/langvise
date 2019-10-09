@@ -1,0 +1,20 @@
+$bg: #FAFAFA;
+
+.about-company{
+  margin-top: 78px;
+  background: $bg;
+  &.wrap{
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .title{
+    margin-bottom: 20px;
+  }
+  .cn_img{
+    max-width: 960px;
+    max-height: 550px;
+  }
+  p{
+    margin: 20px 0 0;
+  }
+}

@@ -1,0 +1,115 @@
+$bg: #000018;
+
+.app {
+  color: #ffffff;
+  background: $bg;
+
+  &.wrap {
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .desc {
+    color: #6E7377;
+    margin-top: 27px;
+  }
+
+  .cn_img {
+    max-width: 540px;
+    max-height: 740px;
+  }
+
+  strong {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .gall {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+
+    p {
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  li {
+    $url_img: "../img/icon-svg/web-programming.svg" 1,
+    "../img/icon-svg/box.svg" 2,
+    "../img/icon-svg/responsive.svg" 3,
+    "../img/icon-svg/Group8.svg" 4;
+    @each $src, $i in $url_img {
+      &:nth-of-type(#{$i}) {
+        header {
+          &:before {
+            background: url(#{$src}) no-repeat 50% 50%;
+            background-size: contain;
+          }
+        }
+      }
+    }
+  }
+
+  header {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+    &:before {
+      content: '';
+      width: 45px;
+      height: 40px;
+      margin-right: 20px;
+      display: inline-block;
+      flex-shrink: 0;
+    }
+  }
+
+  .cn-img {
+    margin: 0 auto;
+    width: 44vw;
+    height: 61.5vw;
+  }
+
+  .cn_btn {
+    margin: 28px 0 30px;
+
+    ul {
+      display: flex;
+      margin: 16px -5px 0;
+    }
+  }
+
+  .btn {
+    margin: 0 5px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 140px;
+    padding: 8px 20px;
+    background: #ffffff;
+
+    .apple {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: url("../img/icon-svg/apple.svg") no-repeat;
+      background-size: contain;
+    }
+
+    .android {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: url("../img/icon-svg/android.svg") no-repeat;
+      background-size: contain;
+    }
+  }
+}

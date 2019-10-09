@@ -1,0 +1,65 @@
+$bg: #FAFAFA;
+$line__color: #D2D2D2;
+.how-we-work-card{
+  background: $bg;
+  font-size: 16px;
+  line-height: 130%;
+
+  hr{
+    border: none;
+    color: $line__color;
+    background-color: $line__color;
+    height: 1px;
+    margin: 30px 0;
+  }
+  @at-root {
+    .plyr{
+      margin-bottom: 30px;
+    }
+    .plyr__control--overlaid{
+      background: rgba(255, 255, 255, 0.8);
+      color: #0057FF;
+    }
+    .plyr--video{
+      background: transparent;
+      border-radius: 10px;
+    }
+    .plyr__video-wrapper{
+      background: transparent;
+    }
+    .plyr--video .plyr__control.plyr__tab-focus, .plyr--video .plyr__control:hover, .plyr--video .plyr__control[aria-expanded='true']{
+      background: #0057FF;
+    }
+    .plyr--full-ui input[type='range']{
+      color: #0057FF;
+    }
+    .plyr__control.plyr__tab-focus {
+      box-shadow: 0 0 0 5px rgba(0, 87, 255, 0.5);
+      outline: 0;
+    }
+  }
+
+
+}
+
+.how-we-work{
+  .gall{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .gall_it {
+    padding: 20px 30px 20px 20px;
+    border: 1px solid #EAEAEA;
+    border-radius: 10px;
+  }
+  strong{
+    display: block;
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #0057FF;
+  }
+}

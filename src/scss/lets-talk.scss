@@ -1,0 +1,36 @@
+$bg: #FAFAFA;
+$color: #6E7377;
+
+.lets-talk{
+  color: $color;
+  background: $bg;
+
+  &.wrap{
+    padding-bottom: 0;
+  }
+
+  .title{
+    margin-bottom: 20px;
+    color: #000;
+  }
+
+  .btn{
+    margin-top: 30px;
+  }
+
+  .info{
+
+  }
+  .wrap_img{
+    position: relative;
+    left: -15px;
+    width: 100vw;
+    margin-top: 40px;
+    img{
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
