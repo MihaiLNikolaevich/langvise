@@ -10,6 +10,18 @@
   url('../fonts/montserrat/montserrat-regular.woff') format('woff'),
   url('../fonts/montserrat/montserrat-regular.ttf') format('truetype');
 };
+@font-face {
+  font-family: 'Montserrat-Black';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url('../fonts/montserrat/Montserrat-Black.eot');
+  src: local('Montserrat Black'), local('Montserrat-Black'),
+  url('../fonts/montserrat/Montserrat-Black.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/montserrat/Montserrat-Black.woff2') format('woff2'),
+  url('../fonts/montserrat/Montserrat-Black.woff') format('woff'),
+  url('../fonts/montserrat/Montserrat-Black.ttf') format('truetype');
+};
 
 @font-face {
   font-family: 'ProximaNova';

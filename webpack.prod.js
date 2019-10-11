@@ -5,12 +5,13 @@ const path = require('path');
 const TerserJSPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const autoprefixer = require( "autoprefixer" );
 
 module.exports = merge(common, {
     mode: 'production',
     plugins: [
         new MiniCssExtractPlugin({
-            filename: '[name].[hash].css',
+            filename: 'css/[name].[hash].css',
             ignoreOrder: true,
         })
     ],
@@ -40,6 +41,14 @@ module.exports = merge(common, {
                         loader: "css-loader",
                         options: {
                         },
+                    },
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            plugins: [
+                                autoprefixer()
+                            ],
+                        }
                     },
                     {
                         loader: "sass-loader",

@@ -11,7 +11,7 @@ $color: #000;
 
   .gall {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
     grid-gap: 20px 35px;
     align-items: center;
     justify-items: center;
@@ -21,4 +21,29 @@ $color: #000;
     max-height: 45px;
     height: 100%;
   }
+}
+@media screen and (min-width: 768px) {
+  .partners {
+    .gall {
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      grid-gap: 4rem;
+    }
+    .gall_it {
+      max-height: 80px;
+      min-height: 50px;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .partners{
+    &.wrap{
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+    .title{
+      margin-bottom: 3rem;
+    }
+  }
+
 }

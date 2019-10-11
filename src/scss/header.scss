@@ -7,7 +7,7 @@ $header__padding-top-bot: 10px;
   padding-top: $header__padding-top-bot;
   padding-bottom: $header__padding-top-bot;
   z-index: 99;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.9);
   transition: .25s;
   font-size: 18px;
   line-height: 150%;
@@ -42,8 +42,8 @@ $header__padding-top-bot: 10px;
       flex-direction: column;
       align-items: center;
       width: 100%;
-      height: 100%;
-      min-height: 100vh;
+      height: 100vh;
+      //min-height: 100vh;
       overflow-y: auto;
       padding: $header__padding-top-bot 0 65px;
       background: #fff;
@@ -252,6 +252,13 @@ $header__padding-top-bot: 10px;
   }
 }
 
+@media screen and (orientation: landscape) and (max-height: 450px) {
+  .header {
+    padding-top: $header__padding-top-bot/2;
+    padding-bottom: $header__padding-top-bot/2;
+  }
+}
+
 @media screen and (min-width: 768px) and (min-height: 450px) {
   .header {
     padding-top: $header__padding-top-bot * 2;
@@ -264,8 +271,8 @@ $header__padding-top-bot: 10px;
 
     .logo {
       svg {
-        width: 198px;
-        height: 25px;
+        width: 180px;
+        height: 27px;
       }
     }
   }
@@ -274,14 +281,22 @@ $header__padding-top-bot: 10px;
   }
 }
 
-@media screen and (min-width: 1200px) {
+
+@media screen and (min-width: 1240px) {
   .header {
     font-size: 16px;
 
     .menu_li {
       display: inline-block;
-      margin-left: 20px;
+      margin-left: 30px;
+      &.menu_li-phone{
+        margin-left: 20px;
+      }
+      &.menu_li-mail{
+        margin-left: 20px;
+      }
     }
+
     .menu_li-btn{
       margin-left: 30px;
     }
@@ -294,19 +309,17 @@ $header__padding-top-bot: 10px;
   }
 }
 
-@media screen and (min-width: 1350px) {
+@media screen and (min-width: 1600px) {
   .header {
-    padding-top: $header__padding-top-bot * 5;
-    padding-bottom: $header__padding-top-bot * 5;
-    font-size: 18px;
+    padding-top: $header__padding-top-bot * 3.5;
+    padding-bottom: $header__padding-top-bot * 3.5;
     .menu_li {
-      margin-left: 25px;
+      margin-left: 40px;
     }
     .menu_li-btn{
-      margin-left: 35px;
+      margin-left: 40px;
     }
     .btn{
-      font-size: 18px;
       min-width: 200px;
     }
     &.min {

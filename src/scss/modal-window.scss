@@ -176,9 +176,8 @@
   .modal {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-
+    top: 10%;
     &.sent {
-      top: 10%;
       width: 600px;
       height: 482px;
 
@@ -204,7 +203,6 @@
       height: fit-content;
       max-height: 655px;
       padding: 0;
-      top: 10%;
       .cn{
         display: flex;
       }

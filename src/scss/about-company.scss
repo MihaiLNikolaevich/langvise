@@ -1,20 +1,57 @@
 $bg: #FAFAFA;
 
-.about-company{
-  margin-top: 78px;
+.about-company {
+  margin-top: 19px;
   background: $bg;
-  &.wrap{
+
+  &.wrap {
     padding-top: 30px;
     padding-bottom: 30px;
   }
-  .title{
+
+  .title {
     margin-bottom: 20px;
   }
-  .cn_img{
+
+  .cn_img {
     max-width: 960px;
     max-height: 550px;
   }
-  p{
+
+  p {
     margin: 20px 0 0;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .about-company{
+    position: relative;
+    margin-top: 2.6rem;
+    &.wrap{
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+    .title{
+      margin-bottom: 21px;
+    }
+    p{
+      margin: 0 0 1.8rem;
+    }
+    .content{
+      width: 50%;
+      padding-right: 5.7rem;
+    }
+    .cn_img{
+      width: 50%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      max-width: none;
+      max-height: none;
+    }
+    .img{
+      object-fit: cover;
+    }
   }
 }

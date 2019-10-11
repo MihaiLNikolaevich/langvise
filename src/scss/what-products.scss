@@ -13,7 +13,7 @@ $bg: #0057FF;
   }
   .gall{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     grid-gap: 30px;
   }
   .gall_it{
@@ -25,5 +25,44 @@ $bg: #0057FF;
     width: 60px;
     height: 50px;
     margin-right: 20px;
+  }
+}
+
+@media screen and (min-width: 992px){
+  .what-products{
+    font-size: 20px;
+    &.wrap{
+      padding-top: 5rem;
+    }
+    .title{
+      margin-bottom: 2.6rem;
+    }
+    .gall{
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      grid-gap: 4rem 6.3rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1240px){
+  .what-products{
+    &.wrap{
+      padding-top: 5rem;
+    }
+    .title{
+      margin-bottom: 2.6rem;
+    }
+    .gall{
+      grid-gap: 6.3rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1350px){
+  .what-products{
+    font-size: 22px;
+    .gall{
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
   }
 }

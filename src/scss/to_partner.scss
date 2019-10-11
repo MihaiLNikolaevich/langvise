@@ -6,8 +6,8 @@ $list-it__margin-top-bot: 30px;
   }
 
   .cn_img {
-    max-width: 1142px;
-    max-height: 598px;
+    max-width: 825px;
+    max-height: 562px;
     width: 100%;
     overflow: hidden;
     border-radius: 10px;
@@ -32,5 +32,35 @@ $list-it__margin-top-bot: 30px;
 
   .list_it {
     margin: $list-it__margin-top-bot 0;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .to_partner{
+    &.wrap{
+      padding-bottom: 6.5rem;
+    }
+    .cn{
+      position: relative;
+    }
+    .content{
+      width: 43%;
+    }
+    .cn_img{
+      width: 54%;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .des{
+      margin-bottom: 2.5rem;
+      max-width: 658px;
+    }
+    .list{
+      margin: 0 0 30px;
+    }
+    .list_it{
+      margin: 1.6rem 0 1.6rem 0;
+    }
   }
 }

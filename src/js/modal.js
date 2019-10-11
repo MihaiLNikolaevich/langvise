@@ -4,7 +4,10 @@ export default class Modal {
     static create() {
         let elBg = document.querySelector('.modal-bg');
 
-        if (elBg) return elBg;
+        if (elBg) {
+            elBg.classList.add('active');
+            return elBg;
+        }
 
         elBg = document.createElement('div');
         elBg.className = 'modal-bg active';

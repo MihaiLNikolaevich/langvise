@@ -39,8 +39,10 @@ export default function select(selector) {
         }
         x[i].appendChild(b);
         a.addEventListener("click", function(e) {
+            console.log(e);
             e.stopPropagation();
             closeAllSelect(this);
+            console.log(this);
             this.nextSibling.classList.toggle("select-hide");
             this.classList.toggle("select-arrow-active");
         });

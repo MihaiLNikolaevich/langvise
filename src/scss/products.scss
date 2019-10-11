@@ -1,3 +1,5 @@
+$bg: #FAFAFA;
+
 .products {
   .title {
     padding-right: 30px;
@@ -5,7 +7,7 @@
 
   .gall {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
     grid-gap: 20px;
   }
 
@@ -20,7 +22,7 @@
   @at-root {
     .tabs {
       position: relative;
-      left: -15px;
+      left: -$glob_wrap__padding;
       display: flex;
       align-items: center;
       overflow-x: auto;
@@ -48,21 +50,23 @@
     .tabs_it {
       display: block;
       width: max-content;
-      color: #000;
+      color: rgba(0, 0, 0, 0.55);
       padding: 15px 10px;
       margin: 0 12px;
-      transition: .25s color;
+      border-bottom: 1px solid transparent;
+      transition: .25s color, .25s border-bottom-color;
+      &.active{
+        color: #000;
+      }
     }
     .prod-prev {
       padding: 20px;
       border: 1px solid #EAEAEA;
       border-radius: 10px;
 
-      .cn-img {
+      .cn_img {
         display: block;
-        height: 60vw;
-        max-height: 276px;
-
+        height: 194px;
         margin-bottom: 30px;
       }
 
@@ -80,8 +84,7 @@
       }
 
       p {
-        font-size: 14px;
-        line-height: 17px;
+        line-height: 120%;
         margin-bottom: 10px;
       }
 
@@ -100,7 +103,7 @@
   }
 }
 
-$bg: #FAFAFA;
+
 .related{
   background-color: $bg;
   &.wrap{
@@ -109,5 +112,70 @@ $bg: #FAFAFA;
   }
   .owl-theme .owl-nav.disabled + .owl-dots{
     margin-top: 30px;
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  .tabs{
+    left: initial;
+    width: auto;
+    margin: 0 0 2.5rem;
+  }
+  .tabs_it{
+    margin: 0 3rem 0 0;
+    &.active{
+      border-bottom-color: #000;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .products{
+    &.wrap{
+      padding-top: 4.6rem;
+      padding-bottom: 4.7rem;
+    }
+    .gall{
+      grid-gap: 2.5rem;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    }
+  }
+
+  .prod-prev {
+    padding: 1.6rem 2.3rem 1.4rem;
+    .title{
+      padding: 0;
+    }
+    .cn_img{
+      margin-bottom: 2.5rem;
+    }
+    .price{
+      margin: 1.1rem 0 1.5rem;
+    }
+    .btn{
+      margin-top: 25px;
+    }
+  }
+
+
+  .related {
+    &.wrap {
+      padding-top: 5rem;
+      padding-bottom: 6.25rem;
+    }
+    .cn{
+      >.title{
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+}
+
+@media screen and (min-width: 1240px) {
+  .prod-prev .cn_img {
+    height: 240px;
   }
 }

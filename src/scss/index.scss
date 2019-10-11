@@ -13,7 +13,8 @@ $btn_font: 'ProximaNova', sans-serif;
 $glob__bg: #fff;
 $glob__color: #000;
 $glob_wrap__padding: 15px;
-$glob_cn__max-width: 1920-160-160+px;
+$glob-desktop_wrap__padding: 3rem;
+$glob_cn__max-width: 1920-160+px;
 $list-it_list__bg: #2864FF;
 $footer__bg: #000018;
 
@@ -38,10 +39,22 @@ h3 {
   margin: 0;
 }
 
+button {
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+}
+
 form {
   display: block;
 }
-
+.select{
+  label{
+    margin: 0;
+  }
+  margin: 20px 0;
+}
 label {
   display: flex;
   flex-direction: column;
@@ -128,7 +141,8 @@ strong {
 }
 
 section.wrap,
-article.wrap {
+article.wrap,
+aside.wrap {
   padding-top: 40px;
   padding-bottom: 40px;
 }
@@ -258,8 +272,9 @@ article.wrap {
 }
 
 h1 {
+  font-family: 'Montserrat-Black', sans-serif;
   font-weight: 900;
-  font-size: 20px;
+  font-size: 2rem;
   line-height: 130%;
 }
 
@@ -267,8 +282,8 @@ h2.title {
   margin-bottom: 30px;
   font-style: normal;
   font-weight: bold;
-  font-size: 18px;
   line-height: 130%;
+  font-size: 18px;
 }
 
 $list-it__margin-top-bot: 20px;
@@ -300,45 +315,159 @@ $list-it__margin-top-bot: 20px;
   height: 100%;
   object-fit: contain;
 }
-
+.static{
+  .title{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+}
 .txt {
   font-size: 18px;
+  line-height: 130%;
   color: #6E7377;
 }
 
 @media screen and (min-width: 768px) and (min-width: 450px) {
-  body{
+  body {
     padding-top: 80px;
     font-size: 14px;
   }
   .wrap {
-    padding-left: $glob_wrap__padding * 2;
-    padding-right: $glob_wrap__padding * 2;
+    padding-left: $glob-desktop_wrap__padding;
+    padding-right: $glob-desktop_wrap__padding;
   }
 }
-@media screen and (min-width: 1200px) {
-  body{
-    padding-top: 84px;
+
+@media screen and (max-width: 992px) {
+  .desktop {
+    display: none !important;
   }
 }
-@media screen and (min-width: 1350px) {
-  body{
-    padding-top: 144px;
+
+@media screen and (min-width: 992px) {
+  body {
+    font-size: 16px;
   }
-}
-@media screen and (min-width: 1500px) {
-  body{
-    font-size: 18px;
+  .mobile {
+    display: none !important;
   }
   .wrap {
-    padding-left: $glob_wrap__padding * 2;
-    padding-right: $glob_wrap__padding * 2;
+    &.wrap-big {
+      .cn{
+        padding-left: $glob-desktop_wrap__padding;
+        padding-right: $glob-desktop_wrap__padding;
+      }
+    }
+  }
+  section.wrap,
+  article.wrap,
+  aside.wrap {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+  }
+  .static{
+    .cn{
+      max-width: 1200px;
+    }
+    .title{
+      max-width: 65%;
+      font-size: 2.4rem;
+      margin-bottom: 2.5rem
+    }
+  }
+
+  h2.title {
+    &:not(.not) {
+      font-size: 2.4rem;
+    }
+
+    &.not {
+      font-size: 18px;
+    }
+  }
+
+
+  .list {
+    margin: -1.6rem 0 -1.6rem 0;
+    @at-root {
+      .list_it {
+        margin: 1.6rem 0!important;
+      }
+    }
+  }
+
+}
+
+
+@media screen and (min-width: 1240px) {
+  body {
+    padding-top: 84px;
+    &::-webkit-scrollbar {
+      -webkit-appearance: none;
+      display: block;
+      width: 8px;
+      position: fixed;
+      right: 0;
+      top: 0;
+      height: 100%;
+    }
+    &::-webkit-scrollbar:vertical {
+      width: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #0057FF;
+    }
+    &::-webkit-scrollbar-track {
+      border: 8px solid #e5e5e5;
+    }
+  }
+}
+
+@media screen and (min-width: 1350px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  body {
+    padding-top: 114px;
+  }
+}
+
+@media screen and (min-width: 1820px) {
+  html {
+    font-size: 18.5px;
+  }
+  body {
+    font-size: 18px;
+  }
+  .list {
+    font-size: 18px;
+  }
+  label{
+    margin: 30px 0;
+  }
+  .wrap {
+    &.wrap-big {
+      .cn{
+        padding-left: $glob-desktop_wrap__padding*2;
+        padding-right: $glob-desktop_wrap__padding*2;
+      }
+    }
+  }
+  input, textarea {
+    font-size: 18px;
   }
 }
 
 @import 'header';
 @import 'prod';
-
 @import 'about-company';
 @import 'word_courses';
 @import 'theme';
@@ -356,6 +485,7 @@ $list-it__margin-top-bot: 20px;
 @import 'what-products';
 @import 'to_partner';
 @import 'contact-us';
+@import 'questions';
 @import 'partners';
 @import 'info-order';
 @import 'basket';

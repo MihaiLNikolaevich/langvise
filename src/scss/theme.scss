@@ -18,3 +18,38 @@
     color: #0057FF;
   }
 }
+@media screen and (min-width: 768px){
+  .theme{
+    .gall {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+  }
+}
+@media screen and (min-width: 992px){
+  .theme{
+    &.wrap{
+      padding-top: 5rem;
+    }
+    .title{
+      margin-bottom: 2.6rem;
+      text-align: center;
+    }
+    .gall{
+      padding: 5rem 7rem 2.8rem;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 230px));
+      justify-content: space-between;
+      grid-gap: 1.8rem 5rem;
+    }
+    .gall_it{
+      font-size: 20px;
+    }
+  }
+}
+@media screen and (min-width: 1240px){
+  .theme{
+    .gall_it{
+      font-size: 22px;
+    }
+  }
+}

@@ -179,6 +179,8 @@ $dot-background-active:	$color-base !default;
   // Styling Next and Prev buttons
   .owl-nav {
     margin-top: 10px;
+    display: flex;
+    align-items: center;
     text-align: center;
     -webkit-tap-highlight-color: transparent;
 
@@ -193,8 +195,6 @@ $dot-background-active:	$color-base !default;
       border-radius: 3px;
 
       &:hover {
-        background: $nav-background-hover;
-        color:$nav-color-hover;
         text-decoration: none;
       }
     }
@@ -236,5 +236,15 @@ $dot-background-active:	$color-base !default;
         }
       }
     }
+  }
+}
+.carousel-count{
+  min-width: 40px;
+  text-align: center;
+  margin: 0 5px;
+}
+@media screen and (min-width: 992px) {
+  .owl-nav{
+    position: absolute;
   }
 }

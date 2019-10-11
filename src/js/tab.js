@@ -21,9 +21,9 @@ export default function tabs(tabsSelector, elSelector) {
         if (!el.hasAttribute('href')) return;
 
         document.querySelectorAll('.'+el.className).forEach((elem) => {
-            elem.style.color = 'rgba(0, 0, 0, 0.7)';
+            if (el != elem) elem.classList.remove('active');
         });
-        el.style.color = '';
+        el.classList.add('active');
 
         let attr = el.getAttribute('href').replace(/#/, '');
 

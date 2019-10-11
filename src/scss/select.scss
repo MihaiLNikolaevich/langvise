@@ -96,3 +96,14 @@ select {
   background-color: rgba(0, 0, 0, 0.06);
 }
 
+@media screen and (min-width: 1820px) {
+  select{
+    font-size: inherit;
+  }
+  .select{
+    margin: 30px 0;
+  }
+  .select-selected{
+    font-size: inherit;
+  }
+}

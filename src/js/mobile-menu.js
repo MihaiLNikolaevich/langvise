@@ -34,7 +34,7 @@ export function menu(onMenuSelector, menuSelector) {
 
 export function sizeHead(selector = '.header') {
     const head = document.querySelector(selector);
-    if (!head && window.innerWidth != 922) return;
+    if (!head || window.innerWidth < 1350) return;
 
     const check = (y) => (y > 60) ? head.classList.add('min') : head.classList.remove('min');
 
@@ -84,6 +84,7 @@ export function searchTarget({ fn = function () {}, bubbling = 'parentElement', 
         while(tg != this) {
 
             for (const target of targets) {
+
                 if (tg.tagName == target) {
                     fn.call(this, tg);
                     break;

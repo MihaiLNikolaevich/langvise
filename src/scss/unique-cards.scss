@@ -13,3 +13,37 @@
   }
 
 }
+@media screen and (min-width: 992px) {
+  .unique-cards{
+    &.wrap{
+      padding-top: 6.2rem;
+      position: relative;
+    }
+    .content{
+      width: 34%;
+    }
+    .title{
+      margin-bottom: 18px;
+    }
+    .cn_img{
+      max-width: 1175px;
+      max-height: 720px;
+      width: 62%;
+      position: absolute;
+      right: 0;
+      top: 5rem;
+    }
+    form{
+      max-width: 300px;
+      margin: 45px 0 0;
+    }
+
+  }
+}
+@media screen and (min-width: 1920px){
+  .unique-cards{
+    .cn_img{
+      right: calc(50% - 960px);
+    }
+  }
+}

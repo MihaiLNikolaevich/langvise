@@ -13,7 +13,7 @@
     display: flex;
   }
 
-  .cn-img{
+  .cn_img{
     width: 86px;
     height: 126px;
     flex-shrink: 0;
@@ -73,6 +73,7 @@
     }
 
     .payment{
+
       .btn-tr{
         display: block;
         margin-top: 10px;
@@ -80,6 +81,15 @@
         font-size: 16px;
         color: #0057FF;
       }
+    }
+    .payment_gall{
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 240px);
+      grid-gap: 20px;
+      margin: 20px 0;
+    }
+    .btn-input{
+      margin: 0;
     }
     .recipient{
       margin: 50px 0;
@@ -118,5 +128,37 @@
 
   .btn{
     margin: 30px auto 0;
+  }
+}
+
+$bg: #000018;
+$title_link__color: #6E7377;
+$link__color: #fff;
+.footer-basket{
+  color: $title_link__color;
+  background-color: $bg;
+  .wrap{
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .link{
+    display: inline-block;
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 30px;
+    color: $link__color;
+  }
+}
+@media screen and (min-width: 1240px) {
+  .footer-basket{
+    .wrap{
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+    ul{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
   }
 }

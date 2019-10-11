@@ -10,7 +10,51 @@ $bg: #0057FF;
 
   .btn{
     width: 100%;
-    max-width: 340px;
+    max-width: 380px;
+    margin: 0 auto;
     background: #000000;
+  }
+}
+@media screen and (min-width: 560px) {
+  .subscribe{
+    form{
+      display: flex;
+      align-items: flex-end;
+    }
+    label{
+      margin: 0;
+      flex-grow: 1;
+    }
+    .btn{
+      width: 250px;
+      margin: 0 0 0 20px;
+    }
+  }
+}
+@media screen and (min-width: 992px){
+  .subscribe{
+    &.wrap{
+      padding-top: 4rem;
+      padding-bottom: 5rem;
+    }
+    .btn{
+      margin: 0 0 0 3rem;
+    }
+  }
+}
+@media screen and (min-width: 1240px){
+  .subscribe{
+    .cn{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .title{
+      width: 50%;
+      margin: 0 4.5rem 0 0;
+    }
+    form{
+      width: 50%;
+    }
   }
 }

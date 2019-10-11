@@ -38,8 +38,6 @@ $line__color: #D2D2D2;
       outline: 0;
     }
   }
-
-
 }
 
 .how-we-work{
@@ -61,5 +59,66 @@ $line__color: #D2D2D2;
     margin-bottom: 15px;
     font-size: 18px;
     color: #0057FF;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .how-we-work{
+    .gall{
+      grid-gap: 2.6rem;
+    }
+  }
+}
+@media screen and (min-width: 992px) {
+  .how-we-work-card{
+    .cn{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .content{
+      order: 1;
+      width: 40%;
+      max-width: 570px;
+    }
+    .content-video{
+      width: 52%;
+      margin: 0 1.5rem;
+      order: 2;
+      max-height: 476px;
+    }
+    hr{
+      margin: 2.5rem 0 2rem;
+    }
+    .plyr {
+      margin-bottom: 0;
+    }
+  }
+  .plyr__control--overlaid{
+    padding: 2rem;
+    svg{
+      transform: scale(1.5);
+    }
+  }
+  .how-we-work{
+    .gall{
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 2.7rem;
+    }
+    .title{
+      margin-bottom: 2.5rem;
+    }
+    .gall_it{
+      padding: 2.5rem 3rem 2.5rem 2.5rem;
+      transition: .3s;
+      &:hover{
+        strong{
+          color: #ffffff;
+        }
+        background: #0057FF;
+        color: #ffffff;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      }
+    }
   }
 }

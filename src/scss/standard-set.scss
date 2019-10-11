@@ -1,14 +1,42 @@
 $bg: #000018;
 $list-it__margin-top-bot: 30px;
 
-.standard-set{
+.standard-set {
   color: #ffffff;
   background-color: $bg;
+
   .list {
     margin: #{$list-it__margin-top-bot} 0 0 0;
   }
 
   .list_it {
     margin: $list-it__margin-top-bot 0;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .standard-set{
+    position: relative;
+    .cn_img{
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 55%;
+      background: #ffffff;
+    }
+    .content{
+      width: 41%;
+
+    }
+    .img{
+      object-position: 100% 100%;
+    }
+    .list{
+      margin: 0;
+    }
+    .title{
+      margin-bottom: 2.6rem;
+    }
   }
 }

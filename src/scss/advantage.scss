@@ -5,7 +5,6 @@ $color: #fff;
   color: $color;
   &.wrap{
     padding-top: 48px;
-    padding-bottom: 37px;
   }
   .cn{
     display: grid;
@@ -26,5 +25,35 @@ $color: #fff;
     font-weight: 300;
     font-size: 16px;
     line-height: 20px;
+  }
+}
+@media screen and (min-width: 922px) {
+  .advantage{
+    &.wrap{
+      padding-top: 5rem;
+    }
+    .cn{
+      display: grid;
+      justify-content: center;
+      grid-gap: 4.5rem 5.7rem;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 450px));
+    }
+    strong{
+      font-size: 22px;
+    }
+  }
+}
+@media screen and (min-width: 1350px) {
+  .advantage {
+    .cn {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+}
+@media screen and (min-width: 1820px) {
+  .advantage{
+    p{
+      font-size: 18px;
+    }
   }
 }

@@ -18,11 +18,22 @@ if (process.env.NODE_ENV !== 'production') {
 document.addEventListener("DOMContentLoaded", function() {
 
     menu('.btn-mob.open', '.mob-menu');
+
     sizeHead();
+
     dropdown();
 
+
+    const owlInit = function (event) {
+        const prevBtn = event.currentTarget.children[1].firstElementChild;
+        const el = document.createElement('div');
+        el.className = 'carousel-count';
+        el.textContent = `1 / ${event.item.count}`;
+        prevBtn.after(el);
+    };
+
     $('.owl-one').owlCarousel({
-        loop: false,
+        loop: true,
         margin: 15,
         responsiveClass:true,
         responsive:{
@@ -30,39 +41,55 @@ document.addEventListener("DOMContentLoaded", function() {
                 items:1,
                 nav:false
             },
-            1000:{
+            992:{
                 items:1,
                 nav:true,
+                navText:[
+                    '<svg width="14" height="26" viewBox="0 0 14 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 1L1 13" stroke="black" stroke-linecap="round"/><path d="M13 25L1 13" stroke="black" stroke-linecap="round"/></svg>',
+                    '<svg width="14" height="26" viewBox="0 0 14 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 25L13 13" stroke="black" stroke-linecap="round"/><path d="M1 1L13 13" stroke="black" stroke-linecap="round"/></svg>'
+                ],
+                onInitialized: owlInit,
+                dots: false,
             }
         }
-    });
+    })
+        .on('changed.owl.carousel', function (event) {
+            const tgEl = event.currentTarget.children[1].querySelector('div');
+            if (!tgEl) return;
+            let tgSlid = event.item.index - 1;
+            tgSlid = (tgSlid <= event.item.count) ? tgSlid : 1;
 
-    initForm();
+            tgEl.textContent = `${tgSlid} / ${event.item.count}`;
+        });
 
     $('.owl-multiple').owlCarousel({
         loop: false,
         margin: 20,
         responsiveClass:true,
+        nav:false,
         responsive:{
             0:{
                 items:1,
-                nav:false
             },
             600:{
                 items:2,
-                nav:false,
             },
             992:{
                 items:3,
-                nav:false,
             },
-            1200:{
-                margin: 50,
+            1350:{
+                margin: 35,
                 items:4,
-                nav:false,
+            },
+            1820:{
+                items:4,
+                margin: 50,
             }
         }
     });
+
+
+    initForm();
 
     selectImg('.img-prod', '.cn_img-edit');
 
@@ -75,11 +102,23 @@ document.addEventListener("DOMContentLoaded", function() {
     initMap();
 
     let modalSend = document.querySelector('.modal.sent');
+    let modalSaveTime = document.querySelector('.modal.save-time');
+    let btnSaveTime = document.querySelectorAll('.reqCall');
+
     if (modalSend) {
         modalSend = new Modal(modalSend);
-        modalSend.on();
+        // modalSend.on();
     }
-    // new Modal(document.querySelector('.modal.save-time'));
+
+    if (modalSaveTime && btnSaveTime.length != 0) {
+        modalSaveTime = new Modal(modalSaveTime);
+        for (const btn of btnSaveTime) {
+            btn.addEventListener('click', () => {
+                modalSaveTime.on()
+            }, { passive: true, capture: false })
+        }
+    }
+
 
 });
 

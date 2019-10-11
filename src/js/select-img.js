@@ -19,7 +19,7 @@ export default function selectImg(targetSelector, selectSelector) {
             forEach(tg);
         },
         bubbling: 'firstElementChild',
-        targetSearch: ['IMG']
+        targets: ['IMG']
     });
 
     select.addEventListener('click', search, { passive: true, capture: false })

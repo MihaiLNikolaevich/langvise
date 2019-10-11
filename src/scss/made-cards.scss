@@ -32,3 +32,59 @@ $bg: #000018;
     border-radius: 0 0 10px 10px;
   }
 }
+
+@media screen and (min-width: 650px) {
+  .made-cards{
+    .gall{
+      grid-gap: 2.5rem;
+    }
+    .gall_it{
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .gall_img{
+      flex-shrink: 0;
+    }
+    .gall_des{
+      display: flex;
+      justify-items: center;
+      align-items: center;
+      height: 100%;
+    }
+  }
+}
+@media screen and (min-width: 992px) {
+  .made-cards{
+    &.wrap{
+      padding-top: 5.75rem;
+    }
+    .gall{
+      grid-gap: 2.6rem 5rem;
+    }
+    .title{
+      margin-bottom: 2.6rem;
+    }
+  }
+}
+@media screen and (min-width: 1240px) {
+  .made-cards{
+    .gall{
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 2.6rem 5rem;
+    }
+    .gall_it{
+      display: flex;
+      flex-direction: row
+    }
+    .gall_img{
+      border-radius: 10px 0 0 10px;
+    }
+    .gall_des{
+      padding: 2rem 3.25rem 2rem 4.45rem;
+      border-radius: 0 10px 10px 0;
+      height: auto;
+      text-align: left;
+    }
+  }
+}

@@ -1,11 +1,13 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>langvise | Контакты</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
     <style>body{-webkit-animation:start .65s;-moz-animation:start .65s;-ms-animation:start .65s;animation:start .65s}@-webkit-keyframes start{from{visibility:hidden;opacity:0}to{visibility:visible;opacity:1}}@-moz-keyframes start{from{visibility:hidden;opacity:0}to{visibility:visible;opacity:1}}@-ms-keyframes start{from{visibility:hidden;opacity:0}to{visibility:visible;opacity:1}}@-o-keyframes start{from{visibility:hidden;opacity:0}to{visibility:visible;opacity:1}}@keyframes start{from{visibility:hidden;opacity:0}to{visibility:visible;opacity:1}}</style>
 </head>
 <body>
@@ -30,11 +32,11 @@
                 </div>
             </li>
 
-            <li class="menu_li"><a href="mailto:info@site.cool" class="link anchor">info@site.cool</a></li>
+            <li class="menu_li menu_li-mail"><a href="mailto:info@site.cool" class="link anchor">info@site.cool</a></li>
 
-            <li class="menu_li"><a href="tel:+380952229988" class="link link-phone">095 222 9988</a></li>
+            <li class="menu_li menu_li-phone"><a href="tel:+380952229988" class="link link-phone">095 222 9988</a></li>
 
-            <li class="menu_li menu_li-btn"><button type="button" class="btn blue">Заказать звонок</button></li>
+            <li class="menu_li menu_li-btn"><button type="button" class="btn blue reqCall">Заказать звонок</button></li>
 
             <li><button type="button" class="btn-tr btn-mob open"><svg width="20" height="20" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="2" rx="1" fill="black"/><rect y="5" width="20" height="2" rx="1" fill="black"/><rect y="10" width="20" height="2" rx="1" fill="black"/></svg></button></li>
         </ul>
@@ -65,50 +67,53 @@
 
                 <li><a href="tel:+380952229988" class="link af-link link-phone">095 222 9988</a></li>
 
-                <li><button type="button" class="btn blue">Заказать звонок</button></li>
+                <li><button type="button" class="btn blue reqCall">Заказать звонок</button></li>
             </ul>
         </div>
     </nav>
 </header>
 
+    <section class="wrap wrap-big contact-us">
+            <div class="cn">
+                <div class="contact">
+                    <h2 class="title">Контакты</h2>
+                    <p class="des">Отдел обслуживания клиентов</p>
+                    <ul>
+                        <li>
+                            <p class="tt">Номер телефона</p>
+                            <p><a href="tel:+380955457778"><strong>095 545 7778</strong></a></p>
+                        </li>
+                        <li>
+                            <p class="tt">Telegram, WhatsApp</p>
+                            <p><a href="tel:+380955457778"><strong>095 545 7778</strong></a></p>
+                        </li>
+                        <li>
+                            <p class="tt">E-mail:</p>
+                            <p><a href="mailto:hello@dfsdfsd.sd"><strong>hello@dfsdfsd.sd</strong></a></p>
+                        </li>
+                        <li>
+                            <p class="tt">Время работы</p>
+                            <p>с 9 по 18 Пн-Сб</p>
+                        </li>
+                    </ul>
+                </div>
 
-    <section class="wrap contact-us">
-        <div class="cn">
-            <div class="contact">
-                <h2 class="title">Контакты</h2>
-                <p class="des">Отдел обслуживания клиентов</p>
-                <ul>
-                    <li>
-                        <p class="tt">Номер телефона</p>
-                        <p><a href="tel:+380955457778"><strong>095 545 7778</strong></a></p>
-                    </li>
-                    <li>
-                        <p class="tt">Telegram, WhatsApp</p>
-                        <p><a href="tel:+380955457778"><strong>095 545 7778</strong></a></p>
-                    </li>
-                    <li>
-                        <p class="tt">E-mail:</p>
-                        <p><a href="mailto:hello@dfsdfsd.sd"><strong>hello@dfsdfsd.sd</strong></a></p>
-                    </li>
-                    <li>
-                        <p class="tt">Время работы</p>
-                        <p>с 9 по 18 Пн-Сб</p>
-                    </li>
-                </ul>    
+                <form action="#" method="post">
+                    <h2 class="title">Свяжытесь с нами</h2>
+                    <div class="form_bl">
+                        <label class="req"><span>Ваше им’я</span><input name="name" type="text" placeholder="Введите ваше имя" required></label>
+                        <label class="req"><span>Ваш телефон</span><input name="phone" type="tel" placeholder="095 00 00 000" required></label>
+                        <label class="req"><span>Ваш E-mail</span><input name="email" type="email" placeholder="Введите ваш имейл" required></label>
+                    </div>
+                    <div class="form_bl">
+                        <label class="req"><span>Ваш вопрос</span><textarea name="question" cols="30" rows="6" placeholder="Задайте вас вопрос, и мы свяжемся с вами ближайшым времени"></textarea></label>
+                        <button type="submit" class="btn blue">Отправить</button>
+                    </div>
+                </form>
             </div>
+        </section>
 
-            <form action="#" method="post">
-                <h2 class="title">Свяжытесь с нами</h2>
-                <label class="req"><span>Ваше им’я</span><input name="name" type="text" placeholder="Введите ваше имя" required></label>
-                <label class="req"><span>Ваш телефон</span><input name="phone" type="tel" placeholder="095 00 00 000" required></label>
-                <label class="req"><span>Ваш E-mail</span><input name="email" type="email" placeholder="Введите ваш имейл" required></label>
-                <label class="req"><span>Ваш вопрос</span><textarea name="question" cols="30" rows="6" placeholder="Задайте вас вопрос, и мы свяжемся с вами ближайшым времени"></textarea></label>
-                <button type="submit" class="btn blue">Отправить</button>
-            </form>
-        </div>
-    </section>
-
-    <section class="wrap questions">
+    <section class="wrap wrap-big questions">
         <div class="cn">
             <h2 class="title">Есть вопросы? свяжытесь с нами и мы все уточним</h2>
             <ul class="gall">
@@ -208,26 +213,31 @@
 
             <ul class="sl-maps">
                 <li class="sl-maps_it active">
-                    <header class="des">Главный офис:</header>
-
-                    <p>40 Bowling Green Ln, Farringdon,<br>London EC1R 0NE, UK<br><a href="tel:+442074157000">+44 20 7415 7000</a></p>
+                    <div>
+                        <header class="des">Главный офис:</header>
+                        <p>40 Bowling Green Ln, Farringdon,<br>London EC1R 0NE, UK<br><a href="tel:+442074157000">+44 20 7415 7000</a></p>
+                    </div>
                 </li>
                 <li><hr></li>
                 <li class="sl-maps_it">
-                    <header class="des">Представительство в России:</header>
-                    <p>Ленинградский пр-т., 39,<br> Москва, Россия, 125167<br><a href="tel:+74994097680">+7 499 409-76-80</a></p>
+                    <div>
+                        <header class="des">Представительство в России:</header>
+                        <p>Ленинградский пр-т., 39,<br> Москва, Россия, 125167<br><a href="tel:+74994097680">+7 499 409-76-80</a></p>
+                    </div>
                 </li>
                 <li><hr></li>
                 <li class="sl-maps_it">
-                    <header class="des">Представительство в Беларуси</header>
-                    <p>220007, ул. Могилевская, д. 39 а,<br> оф. 222, Минск, Беларусь<br><a href="tel:+375447777348">+375 44 777-73-48</a></p>
+                    <div>
+                        <header class="des">Представительство в Беларуси</header>
+                        <p>220007, ул. Могилевская, д. 39 а,<br> оф. 222, Минск, Беларусь<br><a href="tel:+375447777348">+375 44 777-73-48</a></p>
+                    </div>
                 </li>
             </ul>
             <div id="map"></div>
         </div>
     </section>
 
-    <section class="wrap subscribe">
+    <section class="wrap wrap-big subscribe">
         <div class="cn">
             <h2 class="title">Хотите быть в курсе новостей, скидок и новинок?</h2>
             <form action="#" method="post">
@@ -238,84 +248,85 @@
     </section>
 
     <footer class="footer">
-    <div class="wrap">
-        <nav class="cn">
-            <a href="./" class="logo">
-                <svg width="194" height="29" viewBox="0 0 194 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18.36 28H0.16V1.32H8.24V20.96H18.36V28ZM48.5653 28H39.4053L38.4453 24.88H28.8453L27.8853 28H18.7253L28.5653 1.32H38.7253L48.5653 28ZM36.2853 17.84L33.6453 9.24L31.0053 17.84H36.2853ZM75.6838 28H67.9238L58.0838 14.48V28H50.0038V1.32H58.3238L67.6038 13.96V1.32H75.6838V28ZM93.2438 28.48C89.0838 28.48 85.5904 27.2267 82.7638 24.72C79.9638 22.1867 78.5638 18.84 78.5638 14.68C78.5638 10.52 79.9638 7.18667 82.7638 4.68C85.5904 2.14667 89.0838 0.879999 93.2438 0.879999C96.1771 0.879999 98.6171 1.54667 100.564 2.88C102.537 4.21333 104.004 5.86667 104.964 7.84L98.1638 11.32C97.7371 10.4133 97.0838 9.64 96.2038 9C95.3504 8.33333 94.3638 8 93.2438 8C91.3238 8 89.7638 8.64 88.5638 9.92C87.3638 11.2 86.7638 12.7867 86.7638 14.68C86.7638 16.5733 87.3638 18.16 88.5638 19.44C89.7638 20.72 91.3238 21.36 93.2438 21.36C93.9904 21.36 94.7638 21.24 95.5638 21C96.3638 20.76 96.9771 20.48 97.4038 20.16V19.2H92.4438V12.16H105.444V23.08C102.19 26.68 98.1238 28.48 93.2438 28.48ZM125.366 28H115.206L105.366 1.32H114.526L120.286 19.28L126.046 1.32H135.206L125.366 28ZM144.724 28H136.644V1.32H144.724V28ZM159.387 28.48C154.267 28.48 150.134 27.0667 146.987 24.24L151.187 18.24C153.587 20.5333 156.454 21.68 159.787 21.68C161.761 21.68 162.747 21.2 162.747 20.24C162.747 19.7867 162.227 19.44 161.187 19.2C160.174 18.96 158.934 18.7067 157.467 18.44C156.027 18.1733 154.574 17.7867 153.107 17.28C151.667 16.7733 150.427 15.88 149.387 14.6C148.374 13.32 147.867 11.7067 147.867 9.76C147.867 7.33333 148.841 5.25333 150.787 3.52C152.761 1.78666 155.481 0.919998 158.947 0.919998C163.454 0.919998 167.227 2.16 170.267 4.64L165.947 10.36C163.627 8.6 161.014 7.72 158.107 7.72C156.747 7.72 156.067 8.12 156.067 8.92C156.067 9.29333 156.427 9.61333 157.147 9.88C157.894 10.1467 158.814 10.36 159.907 10.52C161.001 10.6533 162.187 10.92 163.467 11.32C164.774 11.6933 165.974 12.1467 167.067 12.68C168.161 13.2133 169.067 14.0533 169.787 15.2C170.534 16.32 170.907 17.6533 170.907 19.2C170.907 22.1333 169.881 24.4133 167.827 26.04C165.801 27.6667 162.987 28.48 159.387 28.48ZM193.798 28H173.558V1.32H193.798V8.36H181.638V11H193.518V18.04H181.638V20.96H193.798V28Z" fill="white"/>
-                </svg>
-            </a>
+        <div class="wrap wrap-big">
+            <nav class="cn">
+                <a href="./" class="logo">
+                    <svg width="194" height="29" viewBox="0 0 194 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.36 28H0.16V1.32H8.24V20.96H18.36V28ZM48.5653 28H39.4053L38.4453 24.88H28.8453L27.8853 28H18.7253L28.5653 1.32H38.7253L48.5653 28ZM36.2853 17.84L33.6453 9.24L31.0053 17.84H36.2853ZM75.6838 28H67.9238L58.0838 14.48V28H50.0038V1.32H58.3238L67.6038 13.96V1.32H75.6838V28ZM93.2438 28.48C89.0838 28.48 85.5904 27.2267 82.7638 24.72C79.9638 22.1867 78.5638 18.84 78.5638 14.68C78.5638 10.52 79.9638 7.18667 82.7638 4.68C85.5904 2.14667 89.0838 0.879999 93.2438 0.879999C96.1771 0.879999 98.6171 1.54667 100.564 2.88C102.537 4.21333 104.004 5.86667 104.964 7.84L98.1638 11.32C97.7371 10.4133 97.0838 9.64 96.2038 9C95.3504 8.33333 94.3638 8 93.2438 8C91.3238 8 89.7638 8.64 88.5638 9.92C87.3638 11.2 86.7638 12.7867 86.7638 14.68C86.7638 16.5733 87.3638 18.16 88.5638 19.44C89.7638 20.72 91.3238 21.36 93.2438 21.36C93.9904 21.36 94.7638 21.24 95.5638 21C96.3638 20.76 96.9771 20.48 97.4038 20.16V19.2H92.4438V12.16H105.444V23.08C102.19 26.68 98.1238 28.48 93.2438 28.48ZM125.366 28H115.206L105.366 1.32H114.526L120.286 19.28L126.046 1.32H135.206L125.366 28ZM144.724 28H136.644V1.32H144.724V28ZM159.387 28.48C154.267 28.48 150.134 27.0667 146.987 24.24L151.187 18.24C153.587 20.5333 156.454 21.68 159.787 21.68C161.761 21.68 162.747 21.2 162.747 20.24C162.747 19.7867 162.227 19.44 161.187 19.2C160.174 18.96 158.934 18.7067 157.467 18.44C156.027 18.1733 154.574 17.7867 153.107 17.28C151.667 16.7733 150.427 15.88 149.387 14.6C148.374 13.32 147.867 11.7067 147.867 9.76C147.867 7.33333 148.841 5.25333 150.787 3.52C152.761 1.78666 155.481 0.919998 158.947 0.919998C163.454 0.919998 167.227 2.16 170.267 4.64L165.947 10.36C163.627 8.6 161.014 7.72 158.107 7.72C156.747 7.72 156.067 8.12 156.067 8.92C156.067 9.29333 156.427 9.61333 157.147 9.88C157.894 10.1467 158.814 10.36 159.907 10.52C161.001 10.6533 162.187 10.92 163.467 11.32C164.774 11.6933 165.974 12.1467 167.067 12.68C168.161 13.2133 169.067 14.0533 169.787 15.2C170.534 16.32 170.907 17.6533 170.907 19.2C170.907 22.1333 169.881 24.4133 167.827 26.04C165.801 27.6667 162.987 28.48 159.387 28.48ZM193.798 28H173.558V1.32H193.798V8.36H181.638V11H193.518V18.04H181.638V20.96H193.798V28Z" fill="white"/>
+                    </svg>
+                </a>
 
-            <div class="nav_it">
-                <p>О нас</p>
-                <ul>
-                    <li><a class="link" href="#">Как заказать товар</a></li>
-                    <li><a class="link" href="#">Условия возврата</a></li>
-                    <li><a class="link" href="#">Пользовательское соглашение</a></li>
-                    <li><a class="link" href="#">Обработка персональных данных</a></li>
-                </ul>
-            </div>
+                <div class="nav_it">
+                    <p>О нас</p>
+                    <ul>
+                        <li><a class="link" href="#">Как заказать товар</a></li>
+                        <li><a class="link" href="#">Условия возврата</a></li>
+                        <li><a class="link" href="./privat_polise.html">Пользовательское соглашение</a></li>
+                        <li><a class="link" href="#">Обработка персональных данных</a></li>
+                    </ul>
+                </div>
 
-            <div class="nav_it">
-                <p>Сотрудничество</p>
-                <ul>
-                    <li><a class="link" href="#">Партнерам</a></li>
-                    <li><a class="link" href="#">F.A.Q.</a></li>
-                    <li><a class="link" href="#">Стоимость доставки</a></li>
-                    <li><a class="link" href="#">Условия доставки</a></li>
-                </ul>
-            </div>
+                <div class="nav_it">
+                    <p>Сотрудничество</p>
+                    <ul>
+                        <li><a class="link" href="#">Партнерам</a></li>
+                        <li><a class="link" href="#">F.A.Q.</a></li>
+                        <li><a class="link" href="#">Стоимость доставки</a></li>
+                        <li><a class="link" href="#">Условия доставки</a></li>
+                    </ul>
+                </div>
 
-            <div class="nav_it">
-                <p>Курсы</p>
-                <ul>
-                    <li><a class="link" href="#">Английский</a></li>
-                    <li><a class="link" href="#">Бизнес Английский</a></li>
-                    <li><a class="link" href="#">Немецкий</a></li>
-                </ul>
-            </div>
+                <div class="nav_it">
+                    <p>Курсы</p>
+                    <ul>
+                        <li><a class="link" href="#">Английский</a></li>
+                        <li><a class="link" href="#">Бизнес Английский</a></li>
+                        <li><a class="link" href="#">Немецкий</a></li>
+                    </ul>
+                </div>
 
-            <div class="nav_it">
-                <p>Следите на нами</p>
-                <ul>
-                    <li><a class="link" href="#" target="_blank">Youtube</a></li>
-                    <li><a class="link" href="#" target="_blank">Instagram</a></li>
-                    <li><a class="link" href="#" target="_blank">Facebook</a></li>
-                    <li><a class="link" href="#" target="_blank">Twitter</a></li>
-                    <li><a class="link" href="#" target="_blank">VK</a></li>
-                </ul>
-            </div>
+                <div class="nav_it">
+                    <p>Следите на нами</p>
+                    <ul>
+                        <li><a class="link" href="#" target="_blank">Youtube</a></li>
+                        <li><a class="link" href="#" target="_blank">Instagram</a></li>
+                        <li><a class="link" href="#" target="_blank">Facebook</a></li>
+                        <li><a class="link" href="#" target="_blank">Twitter</a></li>
+                        <li><a class="link" href="#" target="_blank">VK</a></li>
+                    </ul>
+                </div>
 
-            <div class="nav_it contact">
-                <p>Контакт</p>
-                <ul>
-                    <li><a class="link" href="#"><svg width="16" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 0C2.69158 0 0 2.59944 0 5.79457C0 9.75982 5.36941 15.581 5.59802 15.8269C5.81275 16.0579 6.18764 16.0575 6.40198 15.8269C6.63059 15.581 12 9.75982 12 5.79457C11.9999 2.59944 9.30839 0 6 0ZM6 8.70998C4.33545 8.70998 2.98128 7.40213 2.98128 5.79457C2.98128 4.187 4.33549 2.87919 6 2.87919C7.66452 2.87919 9.01869 4.18704 9.01869 5.7946C9.01869 7.40217 7.66452 8.70998 6 8.70998Z" fill="#0057FF"/></svg>Издательство Такое Сякое, Медиа Бизнес Центр, 2 этаж, Артема 11, Москва, Россия</a></li>
-                    <li><a class="link" href="tel:+380952265654"><svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.9357 11.9588L14.8608 11.731C14.685 11.2068 14.1057 10.6599 13.5719 10.5134L11.601 9.97458C11.0672 9.82972 10.3056 10.0251 9.9134 10.4173L9.20054 11.1303C6.60961 10.4287 4.57691 8.39566 3.87707 5.80425L4.58993 5.09126C4.98052 4.70059 5.17582 3.9388 5.03099 3.40327L4.49384 1.43203C4.34901 0.898118 3.7989 0.318631 3.27488 0.142832L3.05026 0.0679276C2.52458 -0.107872 1.77432 0.0695428 1.38373 0.461875L0.316111 1.52969C0.12571 1.71852 0.00363632 2.26222 0.00363632 2.26222C-0.0321941 5.65127 1.29588 8.91494 3.69151 11.3126C6.08064 13.7022 9.33235 15.0289 12.7093 14.9995C12.7272 14.9995 13.2855 14.8807 13.4759 14.6902L14.5435 13.6224C14.9341 13.2333 15.1098 12.483 14.9357 11.9588Z" fill="#0057FF"/></svg>095 226 5654</a></li>
-                    <li><a class="link" href="mailto:info@cool.ol"><svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.29962 8.27111L6.39443 6.60352L0.947266 11.273C1.14526 11.4567 1.41256 11.5711 1.70736 11.5711H14.8919C15.1856 11.5711 15.4518 11.4567 15.6487 11.273L10.2048 6.60352L8.29962 8.27111Z" fill="#0057FF"/><path d="M15.6522 0.869387C15.4542 0.684588 15.188 0.571289 14.8921 0.571289H1.7076C1.4139 0.571289 1.14771 0.685688 0.949707 0.871587L8.29986 7.17125L15.6522 0.869387Z" fill="#0057FF"/><path d="M10.6836 6.15758L15.9999 10.6752V1.5332L10.6836 6.15758Z" fill="#0057FF"/><path d="M0.600098 1.53613V10.6749L5.91637 6.15721L0.600098 1.53613Z" fill="#0057FF"/></svg>info@cool.ol</a></li>
-                </ul>
-            </div>
+                <div class="nav_it contact">
+                    <p>Контакт</p>
+                    <ul>
+                        <li><a class="link" href="#"><svg width="16" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 0C2.69158 0 0 2.59944 0 5.79457C0 9.75982 5.36941 15.581 5.59802 15.8269C5.81275 16.0579 6.18764 16.0575 6.40198 15.8269C6.63059 15.581 12 9.75982 12 5.79457C11.9999 2.59944 9.30839 0 6 0ZM6 8.70998C4.33545 8.70998 2.98128 7.40213 2.98128 5.79457C2.98128 4.187 4.33549 2.87919 6 2.87919C7.66452 2.87919 9.01869 4.18704 9.01869 5.7946C9.01869 7.40217 7.66452 8.70998 6 8.70998Z" fill="#0057FF"/></svg>Издательство Такое Сякое, Медиа Бизнес Центр, 2 этаж, Артема 11, Москва, Россия</a></li>
+                        <li><a class="link" href="tel:+380952265654"><svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.9357 11.9588L14.8608 11.731C14.685 11.2068 14.1057 10.6599 13.5719 10.5134L11.601 9.97458C11.0672 9.82972 10.3056 10.0251 9.9134 10.4173L9.20054 11.1303C6.60961 10.4287 4.57691 8.39566 3.87707 5.80425L4.58993 5.09126C4.98052 4.70059 5.17582 3.9388 5.03099 3.40327L4.49384 1.43203C4.34901 0.898118 3.7989 0.318631 3.27488 0.142832L3.05026 0.0679276C2.52458 -0.107872 1.77432 0.0695428 1.38373 0.461875L0.316111 1.52969C0.12571 1.71852 0.00363632 2.26222 0.00363632 2.26222C-0.0321941 5.65127 1.29588 8.91494 3.69151 11.3126C6.08064 13.7022 9.33235 15.0289 12.7093 14.9995C12.7272 14.9995 13.2855 14.8807 13.4759 14.6902L14.5435 13.6224C14.9341 13.2333 15.1098 12.483 14.9357 11.9588Z" fill="#0057FF"/></svg>095 226 5654</a></li>
+                        <li><a class="link mail" href="mailto:info@cool.ol"><svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.29962 8.27111L6.39443 6.60352L0.947266 11.273C1.14526 11.4567 1.41256 11.5711 1.70736 11.5711H14.8919C15.1856 11.5711 15.4518 11.4567 15.6487 11.273L10.2048 6.60352L8.29962 8.27111Z" fill="#0057FF"/><path d="M15.6522 0.869387C15.4542 0.684588 15.188 0.571289 14.8921 0.571289H1.7076C1.4139 0.571289 1.14771 0.685688 0.949707 0.871587L8.29986 7.17125L15.6522 0.869387Z" fill="#0057FF"/><path d="M10.6836 6.15758L15.9999 10.6752V1.5332L10.6836 6.15758Z" fill="#0057FF"/><path d="M0.600098 1.53613V10.6749L5.91637 6.15721L0.600098 1.53613Z" fill="#0057FF"/></svg>info@cool.ol</a></li>
+                    </ul>
+                </div>
 
-            <div class="nav_it cards">
-                <p>Платежная систем</p>
-                <ul>
-                    <li><a class="link" href="#" target="_blank"><img src="img/icon-svg/Visa.svg" alt="Visa" title="Visa"></a></li>
-                    <li><a class="link" href="#" target="_blank"><img src="img/icon-svg/MasterCard.svg" alt="MasterCard" title="MasterCard"></a></li>
-                    <li><a class="link" href="#" target="_blank"><img src="img/icon-svg/PayPal.svg" alt="PayPal" title="PayPal"></a></li>
-                    <li><a class="link" href="#" target="_blank"><img src="img/icon-svg/YandexMoney.svg" alt="YandexMoney" title="Yandex Money"></a></li>
-                    <li><a class="link" href="#" target="_blank"><img src="img/icon-svg/world.svg" alt="Мир" title="Мир"></a></li>
-                </ul>
-            </div>
+                <div class="nav_it cards one">
+                    <p>Платежная систем</p>
+                    <ul>
+                        <li><a class="link" href="#" target="_blank"><img src="img/icon-svg/Visa.svg" alt="Visa" title="Visa"></a></li>
+                        <li><a class="link" href="#" target="_blank"><img src="img/icon-svg/MasterCard.svg" alt="MasterCard" title="MasterCard"></a></li>
+                        <li><a class="link" href="#" target="_blank"><img src="img/icon-svg/PayPal.svg" alt="PayPal" title="PayPal"></a></li>
+                        <li><a class="link" href="#" target="_blank"><img src="img/icon-svg/YandexMoney.svg" alt="YandexMoney" title="Yandex Money"></a></li>
+                        <li><a class="link" href="#" target="_blank"><img src="img/icon-svg/world.svg" alt="Мир" title="Мир"></a></li>
+                    </ul>
+                </div>
 
-            <div class="nav_it cards">
-                <p>Доставка</p>
-                <ul>
-                    <li><a class="link" href="#" target="_blank"><img src="img/icon-svg/russianPost.svg" alt=""></a></li>
-                    <li><a class="link" href="#" target="_blank"><img src="img/icon-svg/ems.svg" alt=""></a></li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-    <div class="copy">Langvise 2019</div>
-</footer>
+                <div class="nav_it cards two">
+                    <p>Доставка</p>
+                    <ul>
+                        <li><a class="link" href="#" target="_blank"><img src="img/icon-svg/russianPost.svg" alt=""></a></li>
+                        <li><a class="link" href="#" target="_blank"><img src="img/icon-svg/ems.svg" alt=""></a></li>
+                    </ul>
+                </div>
+
+            </nav>
+        </div>
+        <div class="copy">Langvise 2019</div>
+    </footer>
 </body>
 </html>

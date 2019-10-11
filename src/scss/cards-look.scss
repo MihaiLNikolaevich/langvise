@@ -1,6 +1,5 @@
 .cards-look {
 
-
   .cn_img {
     position: relative;
     margin-top: 30px;
@@ -36,5 +35,34 @@
     height: 100%;
     object-fit: cover;
     object-position: 50% 50%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .cards-look{
+    .cn{
+      position: relative;
+    }
+    .title{
+      margin-bottom: 18px;
+    }
+    .content{
+      width: 36%;
+    }
+    .cn_img{
+      margin-top: 0;
+      position: absolute;
+      top: 4rem;
+      right: 0;
+      width: 61%;
+      padding-top: 117px;
+    }
+    .img_it{
+      width: 34vw;
+      height: 23vw;
+    }
+    .list{
+      margin-top: 2.5rem;
+    }
   }
 }

@@ -1,6 +1,6 @@
 .word_courses{
   &.wrap{
-    padding-top: 88px;
+    padding-top: 88-60px;
     padding-bottom: 40px;
   }
   h1{
@@ -34,5 +34,52 @@
     top: 50vw;
     width: 100%;
     margin: 15px 0!important;
+  }
+}
+@media screen and (min-width: 500px){
+  .word_courses{
+    h1{
+      max-width: 70%;
+    }
+  }
+}
+
+
+@media screen and (min-width: 992px) {
+  .word_courses{
+    &.wrap{
+      padding-bottom: 5rem;
+    }
+    figcaption{
+      max-width: 60%;
+      padding-left: $glob-desktop_wrap__padding;
+    }
+    .title {
+      font-size: 18px;
+      margin: 2.2rem 0 1.1rem;
+    }
+    .cn_img{
+      max-height: 450px;
+    }
+    .owl-nav{
+      margin-top: 2.2rem;
+      top: 450px;
+      right: $glob-desktop_wrap__padding;
+    }
+  }
+}
+
+@media screen and (min-width: 1820px) {
+  .word_courses{
+    .cn_img{
+      max-height: 500px;
+    }
+    figcaption{
+      padding-left: $glob-desktop_wrap__padding*2;
+    }
+    .owl-nav{
+      top: 500px;
+      right: $glob-desktop_wrap__padding*2;
+    }
   }
 }
