@@ -11,7 +11,7 @@ module.exports = merge(common, {
     mode: 'production',
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'assets/css/[name].[hash].css',
+            filename: '[name].[hash].css',
             ignoreOrder: true,
         })
     ],
@@ -78,7 +78,7 @@ module.exports = merge(common, {
                     {
                         loader: 'file-loader',
                         options: {
-                            outputPath: 'assets/img',
+                            outputPath: 'img',
                         },
                     },
                     {

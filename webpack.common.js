@@ -30,7 +30,7 @@ module.exports = {
         }),
     ],
     output: {
-        filename: "assets/js/[name].[hash].js",
+        filename: "[name].[hash].js",
         path: path.resolve(__dirname, "dist"),
     },
     module: {
@@ -42,14 +42,14 @@ module.exports = {
                         loader: 'file-loader',
                         options: {
                             name: '[name].[ext]',
-                            outputPath: 'assets/fonts',
+                            outputPath: 'fonts',
                         },
                     },
                 ],
             },
             {
                 test: /\.(mp4|webm)$/i,
-                use: 'file-loader?name=assets/videos/[name].[ext]',
+                use: 'file-loader?name=videos/[name].[ext]',
             },
         ],
     },

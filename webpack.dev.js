@@ -1,7 +1,6 @@
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const autoprefixer = require( "autoprefixer" );
 
 module.exports = merge(common, {
     mode: 'development',
@@ -11,7 +10,7 @@ module.exports = merge(common, {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'assets/css/[name].[hash].css',
+            filename: '[name].[hash].css',
             ignoreOrder: false,
         })
     ],
@@ -65,7 +64,7 @@ module.exports = merge(common, {
                     {
                         loader: 'file-loader',
                         options: {
-                            outputPath: 'assets/img',
+                            outputPath: 'img',
                         },
                     },
                 ],
