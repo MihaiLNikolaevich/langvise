@@ -22,10 +22,6 @@ $footer__bg: #000018;
   box-sizing: border-box;
 }
 
-html {
-  font-size: 10px;
-}
-
 body,
 p,
 input,
@@ -38,6 +34,18 @@ h3 {
   padding: 0;
   margin: 0;
 }
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+
 
 button {
   cursor: pointer;
@@ -91,6 +99,7 @@ textarea {
 
 textarea {
   padding: 20px;
+  resize: none;
 }
 
 input {
@@ -181,10 +190,16 @@ aside.wrap {
     width: fit-content;
     background: #0057FF;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: .25s ease-in-out;
+    &:hover{
+      background: #0045be;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
   }
 }
 
 .btn-input {
+  cursor: pointer;
   input {
     display: none;
   }
@@ -193,7 +208,7 @@ aside.wrap {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 240px;
+    max-width: 240px;
     height: 65px;
     border: 1px solid #EAEAEA;
     border-radius: 10px;
@@ -214,6 +229,7 @@ aside.wrap {
     position: absolute;
     z-index: -1;
     opacity: 0;
+    width: 0;
   }
 
   span {
@@ -424,6 +440,24 @@ $list-it__margin-top-bot: 20px;
     }
     &::-webkit-scrollbar-track {
       border: 8px solid #e5e5e5;
+    }
+  }
+  textarea{
+    &::-webkit-scrollbar {
+      -webkit-appearance: none;
+      border-radius: 5px;
+      margin: 5px 0;
+    }
+    &::-webkit-scrollbar:vertical {
+      width: 5px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+    &::-webkit-scrollbar-track {
+      border: 5px solid transparent;
+      margin: 4px 2px 4px 0;
     }
   }
 }

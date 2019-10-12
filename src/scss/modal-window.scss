@@ -176,7 +176,11 @@
   .modal {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    top: 10%;
+    top: 50%;
+    transform:translateY(-50%) scaleX(.8) scaleY(.8);
+    &.active{
+      transform:translateY(-50%) scaleX(1) scaleY(1);
+    }
     &.sent {
       width: 600px;
       height: 482px;
@@ -201,7 +205,7 @@
       max-width: 1200px;
       width: 90vw;
       height: fit-content;
-      max-height: 655px;
+      max-height: 630px;
       padding: 0;
       .cn{
         display: flex;
@@ -216,10 +220,60 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        .btn{
+          margin-top: 1rem;
+        }
       }
       .wrap{
         padding-left: 25px;
         padding-right: 25px;
+      }
+    }
+  }
+}
+@media (min-width: 992px) {
+  .modal {
+    &.save-time{
+      overflow: hidden;
+      .economize{
+        strong{
+          font-size: 48/2*1.5+px;
+        }
+        .cn_img{
+          max-width: 599px;
+          max-height: 386px;
+        }
+        .des{
+          font-size: inherit;
+        }
+        .discount{
+          max-width: 200px;
+          position: relative;
+          z-index: 1;
+          font-size: 22px;
+        }
+      }
+
+      .manager{
+        strong{
+          font-size: 38/2*1.5+px;
+          margin-bottom: 35px;
+        }
+      }
+      label{
+        margin: 0 0 20px;
+      }
+    }
+  }
+}
+@media (min-width: 992px) {
+  .modal {
+    &.save-time{
+      .economize{
+        .cn_img{
+          position: relative;
+          top: -55px;
+        }
       }
     }
   }

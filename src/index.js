@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
         loop: true,
         margin: 15,
         responsiveClass:true,
+        autoplay: true,
         responsive:{
             0:{
                 items:1,
@@ -66,6 +67,7 @@ document.addEventListener("DOMContentLoaded", function() {
         loop: false,
         margin: 20,
         responsiveClass:true,
+        autoplay: true,
         nav:false,
         responsive:{
             0:{
@@ -110,8 +112,10 @@ document.addEventListener("DOMContentLoaded", function() {
         // modalSend.on();
     }
 
+
     if (modalSaveTime && btnSaveTime.length != 0) {
         modalSaveTime = new Modal(modalSaveTime);
+
         for (const btn of btnSaveTime) {
             btn.addEventListener('click', () => {
                 modalSaveTime.on()
@@ -119,6 +123,15 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
+    function accordion(emitSelector, targetSelector) {
+        const tg = document.querySelector(emitSelector);
+        if (!tg) return;
+
+        tg.addEventListener('click', () => {
+            document.querySelector(targetSelector).classList.toggle('active');
+        }, { passive: true, capture: false })
+    }
+    accordion('.btnTextarea', '.cn_textarea')
 
 });
 

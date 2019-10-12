@@ -1,14 +1,12 @@
 .basket{
-  h2.title{
-    font-size: 24px;
-  }
-
   .gall{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
     grid-gap: 40px;
   }
-
+  a{
+    color: #000;
+  }
   .gall_prod{
     display: flex;
   }
@@ -46,6 +44,7 @@
     }
   }
   .total_price{
+    font-size: 24px;
     margin-top: 40px;
     padding: 45px 20px 20px;
     text-align: center;
@@ -57,7 +56,6 @@
     }
     .price{
       font-weight: bold;
-      font-size: 24px;
       color: #0057FF;
     }
   }
@@ -82,10 +80,10 @@
         color: #0057FF;
       }
     }
-    .payment_gall{
+    .cn_radio{
       display: grid;
-      grid-template-columns: repeat(auto-fill, 240px);
-      grid-gap: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-gap: 20px 2.5rem;
       margin: 20px 0;
     }
     .btn-input{
@@ -99,7 +97,25 @@
     }
   }
 
-
+  .cn_textarea{
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    transition: .3s;
+    label{
+      height: 250px;
+      margin: 0;
+      textarea {
+        height: 100%;
+        margin-top: 16px;
+      }
+    }
+    &.active{
+      visibility: visible;
+      opacity: 1;
+      height: 250px;
+    }
+  }
 
   .cn_submit{
     margin-top: 50px;
@@ -149,7 +165,110 @@ $link__color: #fff;
     color: $link__color;
   }
 }
+
+@media screen and (min-width: 700px) {
+  .cn_checkbox{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 320px));
+    grid-gap: 1.7rem 2.5rem;
+    margin-bottom: 2rem;
+    label{
+      margin: 0;
+    }
+  }
+  .cn_input{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1.7rem 2.5rem;
+    label{
+      margin: 0;
+    }
+  }
+  .basket{
+    .total_price{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: fit-content;
+      min-width: 395px;
+      height: 6rem;
+      max-height: 83px;
+      margin: 3.2rem 0 0 auto;
+      padding: 1.5rem 1.6rem;
+      span:not(.price){
+        display: inline-block;
+        margin-right: 36px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 992px) {
+  .basket{
+    .gall{
+      grid-gap: 3rem 4rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .cn_count{
+      margin: 1rem 0 .7rem;
+    }
+    .cn_submit{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 1.6rem 3.5rem 1.8rem 1.6rem;
+      .des{
+        margin: 0 2.25rem 0 3.7rem;
+      }
+    }
+    .btn{
+      margin: 0;
+    }
+    table{
+      max-width: 320px;
+      width: 100%;
+    }
+  }
+  .recipient{
+    .title{
+      margin-bottom: 2.2rem;
+    }
+    margin: 2.5rem 0 5rem;
+  }
+  .delivery,
+  .payment{
+    .title{
+      margin-bottom: 2.2rem;
+    }
+    margin: 5rem 0 5rem;
+  }
+  .checkbox strong{
+    font-size: inherit;
+  }
+  .cn_radio{
+    margin-bottom: 2rem;
+  }
+  .cn_checkbox{
+    grid-template-columns: repeat(auto-fill, minmax(200px, 250px));
+  }
+}
+
 @media screen and (min-width: 1240px) {
+  .cn_input{
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .cn_radio{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 3rem;
+    justify-content: space-between;
+  }
+  .recipient{
+    margin: 2.5rem 0 5rem;
+  }
+
   .footer-basket{
     .wrap{
       padding-top: 3rem;
