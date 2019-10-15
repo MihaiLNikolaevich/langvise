@@ -7,19 +7,19 @@ class Map {
         return loadGoogleMapsApi({ key: 'AIzaSyA4cn0T63XD7j-FV6Z1gI0TalhQ4eGsWj8' });
     }
 
-    static createMap(googleMaps, mapElement) {
-
+    static createMap(googleMaps, mapElement, position) {
         const maps = new googleMaps.Map(mapElement, {
-            center: { lat: 51.525072, lng: -0.107107 },
-            zoom: 12,
+            center: position,
+            zoom: 14,
         });
 
-        return this.createMarker(googleMaps, maps)
+        return this.createMarker(googleMaps, maps, position)
     }
 
-    static createMarker(googleMaps, maps,) {
+    static createMarker(googleMaps, maps, position) {
+
         return new googleMaps.Marker({
-            position: { lat: 51.525072, lng: -0.107107 },
+            position: position,
             map: maps,
             icon: icoMap
         });

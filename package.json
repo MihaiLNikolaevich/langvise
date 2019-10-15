@@ -18,9 +18,16 @@
     "url": "https://github.com/MihaiLNikolaevich/langvise/issues"
   },
   "homepage": "https://github.com/MihaiLNikolaevich/langvise#readme",
-  "browserslist": ["> 2%", "last 4 version","not ie < 11"],
+  "browserslist": [
+    "> 1%",
+    "last 5 version",
+    "not ie < 11"
+  ],
   "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
     "autoprefixer": "^9.6.4",
+    "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.2.0",
     "file-loader": "^4.2.0",
@@ -34,13 +41,13 @@
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
     "terser-webpack-plugin": "latest",
-    "webpack": "^4.41.0",
+    "webpack": "^4.41.1",
     "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.8.1",
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
-    "babel-polyfill": "^6.26.0",
+    "@babel/polyfill": "^7.6.0",
     "jquery": "^3.4.1",
     "load-google-maps-api": "^2.0.1",
     "lodash": "^4.17.15",

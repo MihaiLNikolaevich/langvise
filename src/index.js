@@ -1,12 +1,14 @@
+import "@babel/polyfill";
+import "whatwg-fetch";
 import $ from "jquery";
 import 'owl.carousel';
 import Plyr from 'plyr';
-import { dropdown, menu, sizeHead } from './js/mobile-menu';
+import { dropdown, menu, searchTarget, sizeHead } from './js/mobile-menu';
 import tabs from './js/tab';
 import select from './js/select';
 import selectImg from "./js/select-img";
 import Modal from "./js/modal";
-import initForm from "./js/form";
+import { formBasket, initForm } from "./js/form";
 import { Map } from './js/maps';
 
 import './scss/index.scss';
@@ -90,8 +92,10 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
+    formBasket();
 
     initForm();
+
 
     selectImg('.img-prod', '.cn_img-edit');
 
@@ -101,17 +105,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     new Plyr('#player');
 
-    initMap();
+    initMap().catch( err => console.log('map', err));
 
-    let modalSend = document.querySelector('.modal.sent');
+
     let modalSaveTime = document.querySelector('.modal.save-time');
-    let btnSaveTime = document.querySelectorAll('.reqCall');
-
-    if (modalSend) {
-        modalSend = new Modal(modalSend);
-        // modalSend.on();
-    }
-
+    const btnSaveTime = document.querySelectorAll('.reqCall');
 
     if (modalSaveTime && btnSaveTime.length != 0) {
         modalSaveTime = new Modal(modalSaveTime);
@@ -121,7 +119,27 @@ document.addEventListener("DOMContentLoaded", function() {
                 modalSaveTime.on()
             }, { passive: true, capture: false })
         }
+
+        modalSaveTime.el.querySelector('form')
+            .addEventListener('submit', () => {
+                modalSaveTime.off()
+            }, { passive: true, capture: false })
     }
+
+    //anchor
+    document.querySelectorAll('.anchor').forEach((el) => {
+
+        el.addEventListener('click', (ev) => {
+            ev.preventDefault();
+
+            const anchor = ev.target.getAttribute('href').replace(/#/, '');
+
+            document.getElementById(anchor).scrollIntoView({ behavior: "smooth" })
+
+        }, { capture: false })
+
+    });
+    // end anchor
 
     function accordion(emitSelector, targetSelector) {
         const tg = document.querySelector(emitSelector);
@@ -133,14 +151,43 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     accordion('.btnTextarea', '.cn_textarea')
 
+
 });
 
-function initMap() {
-    let mapElement = document.getElementById( 'map' );
+async function initMap() {
+    const mapElement = document.getElementById( 'map' );
     if(!mapElement) return;
 
-    Map.loadGoogleMapsApi().then( function (googleMaps) {
-        let maps = Map.createMap( googleMaps, mapElement );
-        console.log( maps );
-    } );
+    const selectMap = document.querySelector('.sl-maps');
+    const googleMaps = await Map.loadGoogleMapsApi();
+
+    function create(target) {
+        const prev = target.parentElement.querySelector('.sl-maps_it.active');
+
+        if (prev) {
+            prev.classList.remove('active')
+        }
+
+        target.classList.add('active');
+        const coordinates = {
+            lat: +target.getAttribute('data-lat') || 50.45,
+            lng: +target.getAttribute('data-lng') || 30.53,
+        };
+
+        Map.createMap( googleMaps, mapElement, coordinates);
+    }
+
+    create(selectMap.firstElementChild);
+
+
+    const eventMap = searchTarget({
+        fn: function (target) {
+            create(target);
+        },
+        targets: ['LI']
+    });
+
+    document.querySelector('.sl-maps')
+        .addEventListener('click', eventMap, { passive: true, capture: false });
+
 }

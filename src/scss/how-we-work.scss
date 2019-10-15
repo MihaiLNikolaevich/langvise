@@ -108,6 +108,9 @@ $line__color: #D2D2D2;
     .title{
       margin-bottom: 2.5rem;
     }
+    strong{
+      font-size: 20px;
+    }
     .gall_it{
       padding: 2.5rem 3rem 2.5rem 2.5rem;
       transition: .3s;
@@ -119,6 +122,13 @@ $line__color: #D2D2D2;
         color: #ffffff;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
       }
+    }
+  }
+}
+@media(min-width: 1820px) {
+  .how-we-work {
+    strong {
+      font-size: 22px;
     }
   }
 }

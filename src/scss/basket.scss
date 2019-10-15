@@ -35,13 +35,14 @@
     .btn-tr{
       font-weight: bold;
       font-size: 24px;
+      &[value="1"]{
+        color: #0057FF;
+      }
+      &[value="0"]{
+        color: #6E7377;
+      }
     }
-    .btn-minus{
-      color: #6E7377;
-    }
-    .btn-plus{
-      color: #0057FF;
-    }
+
   }
   .total_price{
     font-size: 24px;
@@ -94,6 +95,17 @@
     }
     .delivery{
       margin: 50px 0;
+      .cn_input{
+        opacity: 0;
+        height: 0;
+        visibility: hidden;
+        transition: .25s;
+        &.active{
+          opacity: 1;
+          height: auto;
+          visibility: visible;
+        }
+      }
     }
   }
 
@@ -190,6 +202,7 @@ $link__color: #fff;
       align-items: center;
       justify-content: center;
       width: fit-content;
+      max-width: 400px;
       min-width: 395px;
       height: 6rem;
       max-height: 83px;

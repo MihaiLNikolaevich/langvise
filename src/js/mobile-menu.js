@@ -86,7 +86,8 @@ export function searchTarget({ fn = function () {}, bubbling = 'parentElement', 
             for (const target of targets) {
 
                 if (tg.tagName == target) {
-                    fn.call(this, tg);
+                    const self = this;
+                    fn.call(this, tg, self);
                     break;
                 }
             }
