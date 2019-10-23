@@ -371,6 +371,10 @@ $list-it__margin-top-bot: 20px;
   }
   .wrap {
     &.wrap-big {
+      &.prod{
+        padding-left: $glob-desktop_wrap__padding;
+        padding-right: 0;
+      }
       .cn{
         padding-left: $glob-desktop_wrap__padding;
         padding-right: $glob-desktop_wrap__padding;
@@ -393,7 +397,6 @@ $list-it__margin-top-bot: 20px;
     }
     .title{
       max-width: 65%;
-      font-size: 2.4rem;
       margin-bottom: 2.5rem
     }
   }
@@ -490,6 +493,12 @@ $list-it__margin-top-bot: 20px;
   }
   .wrap {
     &.wrap-big {
+      &.prod{
+        .cn{
+          padding-left: $glob-desktop_wrap__padding*2;
+          padding-right: 0;
+        }
+      }
       .cn{
         padding-left: $glob-desktop_wrap__padding*2;
         padding-right: $glob-desktop_wrap__padding*2;
