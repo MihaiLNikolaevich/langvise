@@ -132,6 +132,9 @@
     h1{
       max-width: 90%;
     }
+    .prod_img{
+      padding-left: $glob-desktop_wrap__padding;
+    }
     .content{
       margin-left: auto;
       width: 54%;
@@ -219,6 +222,9 @@
   .prod{
     .gall{
       grid-template-columns: 1fr 1fr 1fr;
+    }
+    .prod_img{
+      padding-left: $glob-desktop_wrap__padding*2;
     }
   }
 }

@@ -23,7 +23,7 @@ export function initForm() {
                     credentials: 'omit',
                     body:  data,
                 });
-
+                console.log(true);
                 if (formBasket) {
                     let modalSend = document.querySelector('.modal.sent.basket_sent');
                     if (modalSend) {
