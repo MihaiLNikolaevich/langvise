@@ -67,7 +67,7 @@ label {
   display: flex;
   flex-direction: column;
   margin: 20px 0;
-
+  font-weight: normal;
   input {
     margin-top: 16px;
 
@@ -188,7 +188,7 @@ aside.wrap {
 
   &.blue {
     width: fit-content;
-    max-width: 200px;
+    max-width: 220px;
     background: #0057FF;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     transition: .25s ease-in-out;
@@ -289,7 +289,7 @@ aside.wrap {
 }
 
 h1 {
-  font-family: 'Montserrat-Black', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 900;
   font-size: 2rem;
   line-height: 130%;
@@ -335,6 +335,7 @@ $list-it__margin-top-bot: 20px;
 .static{
   .title{
     font-size: 24px;
+    line-height: 29px;
     font-weight: bold;
     margin-bottom: 30px;
   }
@@ -389,6 +390,7 @@ $list-it__margin-top-bot: 20px;
   }
 
   h1 {
+    line-height: 110%;
     font-size: 2.8rem;
   }
   .static{
@@ -396,6 +398,7 @@ $list-it__margin-top-bot: 20px;
       max-width: 1200px;
     }
     .title{
+      line-height: 110%;
       max-width: 65%;
       margin-bottom: 2.5rem
     }
@@ -478,9 +481,9 @@ $list-it__margin-top-bot: 20px;
   }
 }
 
-@media screen and (min-width: 1820px) {
+@media screen and (min-width: 1860px) {
   html {
-    font-size: 18.5px;
+    font-size: 20px;
   }
   body {
     font-size: 18px;
@@ -507,6 +510,18 @@ $list-it__margin-top-bot: 20px;
   }
   input, textarea {
     font-size: 18px;
+  }
+  input{
+    height: 65px;
+  }
+  .btn{
+    height: 65px;
+    line-height: 65px;
+    min-width: 220px;
+    &.blue{
+      font-size: 24px;
+      max-width: 250px;
+    }
   }
 }
 

@@ -36,7 +36,7 @@ $color: #fff;
       display: grid;
       justify-content: center;
       grid-gap: 4.5rem 5.7rem;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 450px));
+      grid-template-columns: repeat(auto-fill, minmax(300px, 435px));
     }
     strong{
       font-size: 22px;
@@ -50,7 +50,7 @@ $color: #fff;
     }
   }
 }
-@media screen and (min-width: 1820px) {
+@media screen and (min-width: 1860px) {
   .advantage{
     p{
       font-size: 18px;

@@ -26,7 +26,7 @@ $color: #000;
   .partners {
     .gall {
       grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-      grid-gap: 4rem;
+      grid-gap: 3rem 4rem;
     }
     .gall_it {
       max-height: 80px;

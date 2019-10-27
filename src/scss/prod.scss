@@ -1,6 +1,9 @@
 .prod{
   font-size: 16px;
 
+  h1{
+    line-height: 120%;
+  }
   &.wrap{
     padding-top: 35px;
     padding-bottom: 0;
@@ -130,6 +133,7 @@
       position: relative;
     }
     h1{
+      line-height: 110%;
       max-width: 90%;
     }
     .prod_img{
@@ -218,7 +222,7 @@
     }
   }
 }
-@media screen and (min-width: 1820px) {
+@media screen and (min-width: 1860px) {
   .prod{
     .gall{
       grid-template-columns: 1fr 1fr 1fr;

@@ -95,10 +95,6 @@
       line-height: 130%;
       margin: 24px 0 66px;
     }
-    .btn{
-      max-width: none;
-      width: 240px;
-    }
   }
 
   &.save-time {
@@ -235,7 +231,7 @@
     }
   }
 }
-@media (min-width: 992px) {
+@media screen and (min-width: 992px) {
   .modal {
     &.save-time{
       overflow: hidden;
@@ -270,14 +266,33 @@
     }
   }
 }
-@media (min-width: 992px) {
+@media screen and (min-width: 992px) {
   .modal {
+    .btn{
+      width: 100%;
+      max-width: 250px;
+    }
     &.save-time{
       .economize{
         .cn_img{
           position: relative;
           top: -55px;
         }
+      }
+      .manager{
+        .btn{
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1860px) {
+  .modal{
+    &.sent{
+      .btn{
+        font-size: 18px;
       }
     }
   }

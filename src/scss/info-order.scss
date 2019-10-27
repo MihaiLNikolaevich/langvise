@@ -48,7 +48,7 @@
   }
 
   .btn {
-    width: 200px;
+    min-width: 180px;
     margin: 30px auto 0;
   }
 }
@@ -103,6 +103,7 @@
       font-size: 20px;
     }
     .btn{
+      width: 100%;
       margin-top: 2.2rem;
     }
   }
