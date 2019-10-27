@@ -133,7 +133,8 @@ $cooperation_list-it__margin-top-bot: 30px;
     }
 
     .title {
-      margin-bottom: 2.6rem;
+      line-height: 110%;
+      margin-bottom: 2.5rem;
     }
 
     .cn {
@@ -254,11 +255,10 @@ $cooperation_list-it__margin-top-bot: 30px;
   }
 }
 
-@media screen and (min-width: 1820px) {
+@media screen and (min-width: 1860px) {
   .our-partners {
     .gall{
       grid-template-columns: repeat(auto-fill, minmax(200px, 300px));
-      grid-gap: 3.5rem;
     }
     .cn_img{
       width: 300px;
