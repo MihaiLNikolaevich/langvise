@@ -18,19 +18,19 @@ $color: #000;
   }
 
   .gall_it {
-    max-height: 45px;
+    max-height: 42px;
     height: 100%;
   }
 }
 @media screen and (min-width: 768px) {
   .partners {
     .gall {
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
       grid-gap: 3rem 4rem;
     }
     .gall_it {
-      max-height: 80px;
-      min-height: 50px;
+      max-height: 50px;
+      min-height: 40px;
     }
   }
 }
@@ -43,6 +43,18 @@ $color: #000;
     }
     .title{
       margin-bottom: 3rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1350px) {
+  .partners{
+    .gall {
+      grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+    }
+    .gall_it {
+      max-height: 4rem;
+      min-height: 3.5rem;
     }
   }
 

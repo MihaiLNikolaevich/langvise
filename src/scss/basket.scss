@@ -12,7 +12,7 @@
   }
 
   .cn_img{
-    width: 86px;
+    width: 80px;
     height: 126px;
     flex-shrink: 0;
     margin-right: 15px;
@@ -220,9 +220,12 @@ $link__color: #fff;
 }
 @media screen and (min-width: 992px) {
   .basket{
+    &.wrap{
+      padding-top: 3.4rem;
+    }
     .gall{
-      grid-gap: 3rem 4rem;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-gap: 3rem;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     }
     .cn_count{
       margin: 1rem 0 .7rem;

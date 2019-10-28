@@ -15,29 +15,56 @@
 }
 @media screen and (min-width: 992px) {
   .unique-cards{
+    overflow: hidden;
     &.wrap{
       padding-top: 6.2rem;
       position: relative;
     }
     .content{
-      width: 34%;
+      width: 50%;
+      padding-right: 3.2rem;
     }
     .title{
       margin-bottom: 18px;
     }
     .cn_img{
-      max-width: 1175px;
-      max-height: 720px;
-      width: 62%;
+      max-width: 900px;
+      max-height: 560px;
+      width: 50%;
       position: absolute;
       right: 0;
       top: 5rem;
     }
     form{
-      max-width: 300px;
+      max-width: none;
       margin: 45px 0 0;
     }
+    .btn{
 
+      margin-top: 10px;
+    }
+  }
+}
+@media screen and (min-width: 1240px){
+  .unique-cards{
+    form{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px;
+      .select{
+        margin: 0;
+      }
+      label{
+        margin: 0;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1840px) {
+  .unique-cards{
+    form {
+      grid-gap: 30px;
+    }
   }
 }
 @media screen and (min-width: 1920px){
