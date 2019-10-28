@@ -311,10 +311,14 @@ $header__padding-top-bot: 10px;
 
 @media screen and (min-width: 1600px) {
   .header {
+    font-size: 18px;
     padding-top: $header__padding-top-bot * 3.5;
     padding-bottom: $header__padding-top-bot * 3.5;
     .menu_li {
       margin-left: 40px;
+    }
+    .btn{
+      font-size: 18px;
     }
     .menu_li-btn{
       margin-left: 40px;

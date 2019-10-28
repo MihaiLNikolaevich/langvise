@@ -20,7 +20,7 @@
   "homepage": "https://github.com/MihaiLNikolaevich/langvise#readme",
   "browserslist": [
     "> 1%",
-    "last 5 version",
+    "last 8 version",
     "not ie < 11"
   ],
   "devDependencies": {
