@@ -78,7 +78,8 @@ module.exports = merge(common, {
                     {
                         loader: 'file-loader',
                         options: {
-                            outputPath: 'img',
+                            // outputPath: 'img',
+                            name: '[path][name].[ext]',
                         },
                     },
                     // {
