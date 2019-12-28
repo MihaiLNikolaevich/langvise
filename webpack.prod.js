@@ -67,7 +67,7 @@ module.exports = merge(common, {
                         loader: 'html-loader',
                         options: {
                             attrs: [':poster', 'source:src', 'img:src'],
-                            minimize: true
+                            minimize: false
                         },
                     },
                 ],
